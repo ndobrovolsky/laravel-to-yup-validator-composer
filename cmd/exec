@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# Set the name of the Docker container to run commands in
+CONTAINER_NAME="app"
+
+# Get the command to run from the command-line arguments
+COMMAND="$@"
+
+# Execute the command inside the Docker container
+docker-compose exec "$CONTAINER_NAME" sh -c "$COMMAND"

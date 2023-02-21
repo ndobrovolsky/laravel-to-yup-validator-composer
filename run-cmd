@@ -1,0 +1,14 @@
+#!/bin/bash
+
+# Change the working directory to the directory of this script
+cd "$(dirname "${BASH_SOURCE[0]}")"
+
+# Change the working directory to the cmd directory
+cd cmd
+
+# Get the name of the script to run from the command-line arguments
+SCRIPT_NAME="$1"
+shift
+
+# Run the specified script with the remaining arguments
+./"$SCRIPT_NAME" "$@"
