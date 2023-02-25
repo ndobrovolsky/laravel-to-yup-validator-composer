@@ -1,11 +1,11 @@
 {
-    "name": "diskytech/laravel-to-yup-validator",
-    "description": "A package for converting Laravel validation rules to Yup validation rules, making it easy to reuse your existing validation rules and streamline your development process.",
+    "name": "diskytech/laravel-to-js-validator",
+    "description": "A package for converting Laravel validation rules to javascript validation rules, making it easy to reuse your existing validation rules and streamline your development process.",
     "keywords": [
         "DiSkyTech",
-        "laravel-to-yup-validator"
+        "laravel-to-js-validator"
     ],
-    "homepage": "https://github.com/DiSkyTech/laravel-to-yup-validator",
+    "homepage": "https://github.com/DiSkyTech/laravel-to-js-validator",
     "license": "MIT",
     "type": "library",
     "authors": [
@@ -25,12 +25,12 @@
     },
     "autoload": {
         "psr-4": {
-            "DiSkyTech\\LaravelToYupValidator\\": "src"
+            "DiSkyTech\\LaravelToJsValidator\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "DiSkyTech\\LaravelToYupValidator\\Tests\\": "tests"
+            "DiSkyTech\\LaravelToJsValidator\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -44,10 +44,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "DiSkyTech\\LaravelToYupValidator\\LaravelToYupValidatorServiceProvider"
+                "DiSkyTech\\LaravelToJsValidator\\LaravelToJsValidatorServiceProvider"
             ],
             "aliases": {
-                "LaravelToYupValidator": "DiSkyTech\\LaravelToYupValidator\\LaravelToYupValidatorFacade"
+                "LaravelToJsValidator": "DiSkyTech\\LaravelToJsValidator\\LaravelToJsValidatorFacade"
             }
         }
     }
