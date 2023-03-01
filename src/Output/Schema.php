@@ -1,6 +1,6 @@
 <?php
 
-namespace Ndobrovolsky\LaravelToYupValidator\Output;
+namespace Ndobrovolsky\LaravelToYapValidator\Output;
 
 use Stringable;
 
@@ -19,9 +19,9 @@ class Schema implements Stringable
     {
 
         return <<<HTML
-        var {$this->name} = yup.object({
+        {$this->name}: yup.object({
                         {$this->getRulesLayout()}
-                });\n\t
+                }),\n\t
         HTML;
     }
 

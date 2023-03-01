@@ -3,7 +3,7 @@
 namespace Ndobrovolsky\LaravelToYupValidator\Output;
 
 use Stringable;
-use Ndobrovolsky\LaravelToYupValidator\Output\Schema;
+use Ndobrovolsky\LaravelToYapValidator\Output\Schema;
 
 class Script implements Stringable
 {
@@ -17,10 +17,15 @@ class Script implements Stringable
     public function __toString(): string
     {
         return <<<HTML
-        <script type="text/javascript">
-            var yup = require('yup');
+        <script type="module">
+            import yup from 'yup';
             if(yup){
-                {$this->getSchemaLayout()}
+                windows.ltyValidator = {
+                    yup,
+                    schemas: {
+                        {$this->getSchemaLayout()}
+                    }
+                }
             }
         </script>
         HTML;

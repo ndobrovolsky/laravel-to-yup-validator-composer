@@ -32,22 +32,22 @@ class LaravelToYupValidatorServiceProvider extends ServiceProvider
 
         if ($this->app->runningInConsole()) {
             $this->publishes([
-                __DIR__.'/../config/config.php' => config_path('laravel-to-yup-validator.php'),
+                __DIR__.'/../config/config.php' => config_path('laravel_to_yup_validator.php'),
             ], 'config');
 
             // Publishing the views.
             /*$this->publishes([
-                __DIR__.'/../resources/views' => resource_path('views/vendor/laravel-to-yup-validator'),
+                __DIR__.'/../resources/views' => resource_path('views/vendor/laravel_to_yup_validator'),
             ], 'views');*/
 
             // Publishing assets.
-            /*$this->publishes([
-                __DIR__.'/../resources/assets' => public_path('vendor/laravel-to-yup-validator'),
-            ], 'assets');*/
+            $this->publishes([
+                __DIR__.'/../resources/assets' => resource_path('js/vendor/laravel_to_yup_validator'),
+            ], 'assets');
 
             // Publishing the translation files.
             /*$this->publishes([
-                __DIR__.'/../resources/lang' => resource_path('lang/vendor/laravel-to-yup-validator'),
+                __DIR__.'/../resources/lang' => resource_path('lang/vendor/laravel_to_yup_validator'),
             ], 'lang');*/
 
             // Registering package commands.
