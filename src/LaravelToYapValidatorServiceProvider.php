@@ -82,7 +82,7 @@ class LaravelToYapValidatorServiceProvider extends ServiceProvider
                 $schemas[$name] = $data;
             }
 
-            return new Script($schemas);
+            return count($schemas) > 0 ? new Script($schemas) : '';
         });
     }
 }

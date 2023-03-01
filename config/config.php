@@ -12,5 +12,5 @@ return [
         'image' => Ndobrovolsky\LaravelToYapValidator\Generator\Rules\ImageRule::class,
         'numeric' => Ndobrovolsky\LaravelToYapValidator\Generator\Rules\NumericRule::class,
     ],
-    'resources_path' => 'app/Http/Requests'
+    'resources_path' => 'Http/Requests'
 ];

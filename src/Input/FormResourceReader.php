@@ -15,7 +15,7 @@ class FormResourceReader
     public function __construct(string $path = null)
     {
         if ($path === null) {
-            $resourcesPath = config('laravel-to-yup-validator.resources_path', 'app/Http/Requests');
+            $resourcesPath = config('laravel-to-yup-validator.resources_path', 'Http/Requests');
             $this->path = realpath(app_path()) . '/' . $resourcesPath;
         } else {
             $this->path = $path;
@@ -24,7 +24,12 @@ class FormResourceReader
 
     public function getInstances(): array
     {
-        $files = new RecursiveIteratorIterator(new RecursiveDirectoryIterator($this->path));
+        try {
+            $files = new RecursiveIteratorIterator(new RecursiveDirectoryIterator($this->path));
+        } catch (Throwable $e) {
+            return [];
+        }
+        
         $instances = [];
 
         foreach ($files as $file) {
