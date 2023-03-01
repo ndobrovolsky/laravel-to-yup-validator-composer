@@ -1,9 +1,9 @@
 <?php
 
-namespace DiSkyTech\LaravelToJsValidator\Generator\Rules;
+namespace Ndobrovolsky\LaravelToYapValidator\Generator\Rules;
 
-use DiSkyTech\LaravelToJsValidator\Generator\BaseRuleInterface;
-use DiSkyTech\LaravelToJsValidator\Generator\BaseRule;
+use Ndobrovolsky\LaravelToYapValidator\Generator\BaseRuleInterface;
+use Ndobrovolsky\LaravelToYapValidator\Generator\BaseRule;
 
 class StringRule implements BaseRuleInterface
 {

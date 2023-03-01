@@ -1,6 +1,6 @@
 <?php
 
-namespace DiSkyTech\LaravelToJsValidator\Generator;
+namespace Ndobrovolsky\LaravelToYapValidator\Generator;
 
 use Illuminate\Validation\ValidationRuleParser;
 

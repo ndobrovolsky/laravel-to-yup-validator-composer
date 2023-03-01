@@ -1,16 +1,16 @@
 {
-    "name": "diskytech/laravel-to-js-validator",
+    "name": "ndobrovolsky/laravel-to-yap-validator",
     "description": "A package for converting Laravel validation rules to javascript validation rules, making it easy to reuse your existing validation rules and streamline your development process.",
     "keywords": [
-        "DiSkyTech",
-        "laravel-to-js-validator"
+        "Ndobrovolsky",
+        "laravel-to-yap-validator"
     ],
-    "homepage": "https://github.com/DiSkyTech/laravel-to-js-validator",
+    "homepage": "https://github.com/ndobrovolsky/laravel-to-yup-validator",
     "license": "MIT",
     "type": "library",
     "authors": [
         {
-            "name": "Nick Dobrovolsky",
+            "name": "Nickolay Dobrovolsky",
             "email": "nickolaydobrovolsky@gmail.com",
             "role": "Developer"
         }
@@ -25,12 +25,12 @@
     },
     "autoload": {
         "psr-4": {
-            "DiSkyTech\\LaravelToJsValidator\\": "src"
+            "Ndobrovolsky\\LaravelToYapValidator\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "DiSkyTech\\LaravelToJsValidator\\Tests\\": "tests"
+            "Ndobrovolsky\\LaravelToYapValidator\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -44,10 +44,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "DiSkyTech\\LaravelToJsValidator\\LaravelToJsValidatorServiceProvider"
+                "Ndobrovolsky\\LaravelToYapValidator\\LaravelToYapValidatorServiceProvider"
             ],
             "aliases": {
-                "LaravelToJsValidator": "DiSkyTech\\LaravelToJsValidator\\LaravelToJsValidatorFacade"
+                "LaravelToYapValidator": "Ndobrovolsky\\LaravelToYapValidator\\LaravelToYapValidatorFacade"
             }
         }
     }

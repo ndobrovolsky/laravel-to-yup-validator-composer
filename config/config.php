@@ -1,18 +1,16 @@
 <?php
 
-/*
- * You can place your custom package configuration in here.
- */
 return [
     'rules' => [
-        'string' => DiSkyTech\LaravelToJsValidator\Generator\Rules\StringRule::class,
-        'integer' => DiSkyTech\LaravelToJsValidator\Generator\Rules\IntegerRule::class,
-        'boolean' => DiSkyTech\LaravelToJsValidator\Generator\Rules\BooleanRule::class,
-        'array' => DiSkyTech\LaravelToJsValidator\Generator\Rules\ArrayRule::class,
-        'date' => DiSkyTech\LaravelToJsValidator\Generator\Rules\DateRule::class,
-        'email' => DiSkyTech\LaravelToJsValidator\Generator\Rules\EmailRule::class,
-        'file' => DiSkyTech\LaravelToJsValidator\Generator\Rules\FileRule::class,
-        'image' => DiSkyTech\LaravelToJsValidator\Generator\Rules\ImageRule::class,
-        'numeric' => DiSkyTech\LaravelToJsValidator\Generator\Rules\NumericRule::class,
-    ]
+        'string' => Ndobrovolsky\LaravelToYapValidator\Generator\Rules\StringRule::class,
+        'integer' => Ndobrovolsky\LaravelToYapValidator\Generator\Rules\IntegerRule::class,
+        'boolean' => Ndobrovolsky\LaravelToYapValidator\Generator\Rules\BooleanRule::class,
+        'array' => Ndobrovolsky\LaravelToYapValidator\Generator\Rules\ArrayRule::class,
+        'date' => Ndobrovolsky\LaravelToYapValidator\Generator\Rules\DateRule::class,
+        'email' => Ndobrovolsky\LaravelToYapValidator\Generator\Rules\EmailRule::class,
+        'file' => Ndobrovolsky\LaravelToYapValidator\Generator\Rules\FileRule::class,
+        'image' => Ndobrovolsky\LaravelToYapValidator\Generator\Rules\ImageRule::class,
+        'numeric' => Ndobrovolsky\LaravelToYapValidator\Generator\Rules\NumericRule::class,
+    ],
+    'resources_path' => 'app/Http/Requests'
 ];

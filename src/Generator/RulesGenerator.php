@@ -1,9 +1,9 @@
 <?php
 
-namespace DiSkyTech\LaravelToJsValidator\Generator;
+namespace Ndobrovolsky\LaravelToYapValidator\Generator;
 
 use Illuminate\Validation\ValidationRuleParser;
-use DiSkyTech\LaravelToJsValidator\Generator\RulesMapper;
+use Ndobrovolsky\LaravelToYapValidator\Generator\RulesMapper;
 
 class RulesGenerator
 {

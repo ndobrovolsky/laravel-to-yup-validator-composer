@@ -1,10 +1,10 @@
 <?php
 
-namespace DiSkyTech\LaravelToJsValidator\Tests;
+namespace Ndobrovolsky\LaravelToYapValidator\Tests;
 
 use \Orchestra\Testbench\TestCase as OrchestraTestCase;
 use Illuminate\Foundation\Testing\Concerns\InteractsWithViews;
-use DiSkyTech\LaravelToJsValidator\LaravelToJsValidatorServiceProvider;
+use Ndobrovolsky\LaravelToYapValidator\LaravelToYapValidatorServiceProvider;
 
 class TestCase extends OrchestraTestCase
 {
@@ -19,7 +19,7 @@ class TestCase extends OrchestraTestCase
     protected function getPackageProviders($app)
     {
         return [
-            LaravelToJsValidatorServiceProvider::class,
+            LaravelToYapValidatorServiceProvider::class,
         ];
     }
 

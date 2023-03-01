@@ -1,15 +1,15 @@
 <?php
 
-namespace DiSkyTech\LaravelToJsValidator\Generator;
+namespace Ndobrovolsky\LaravelToYapValidator\Generator;
 
-use DiSkyTech\LaravelToJsValidator\Generator\BaseRuleInterface;
-use DiSkyTech\LaravelToJsValidator\Generator\Rules\DefaultRule;
+use Ndobrovolsky\LaravelToYapValidator\Generator\BaseRuleInterface;
+use Ndobrovolsky\LaravelToYapValidator\Generator\Rules\DefaultRule;
 
 class RulesMapper
 {
     public static function getRule($rule)
     {
-        $rulesMap = config('laravel-to-js-validator.rules');
+        $rulesMap = config('laravel-to-yap-validator.rules');
 
         foreach(array_values($rule) as $value){
             if (

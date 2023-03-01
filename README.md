@@ -1,8 +1,8 @@
 # Very short description of the package
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/DiSkyTech/laravel-to-js-validator.svg?style=flat-square)](https://packagist.org/packages/DiSkyTech/laravel-to-js-validator)
-[![Total Downloads](https://img.shields.io/packagist/dt/DiSkyTech/laravel-to-js-validator.svg?style=flat-square)](https://packagist.org/packages/DiSkyTech/laravel-to-js-validator)
-![GitHub Actions](https://github.com/DiSkyTech/laravel-to-js-validator/actions/workflows/main.yml/badge.svg)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/Ndobrovolsky/laravel-to-yap-validator.svg?style=flat-square)](https://packagist.org/packages/Ndobrovolsky/laravel-to-yap-validator)
+[![Total Downloads](https://img.shields.io/packagist/dt/Ndobrovolsky/laravel-to-yap-validator.svg?style=flat-square)](https://packagist.org/packages/Ndobrovolsky/laravel-to-yap-validator)
+![GitHub Actions](https://github.com/Ndobrovolsky/laravel-to-yap-validator/actions/workflows/main.yml/badge.svg)
 
 This is where your description should go. Try and limit it to a paragraph or two, and maybe throw in a mention of what PSRs you support to avoid any confusion with users and contributors.
 
@@ -11,7 +11,7 @@ This is where your description should go. Try and limit it to a paragraph or two
 You can install the package via composer:
 
 ```bash
-composer require DiSkyTech/laravel-to-js-validator
+composer require Ndobrovolsky/laravel-to-yap-validator
 ```
 
 ## Usage
@@ -40,7 +40,7 @@ If you discover any security related issues, please email nickolaydobrovolsky@gm
 
 ## Credits
 
--   [Nick Dobrovolsky](https://github.com/DiSkyTech)
+-   [Nick Dobrovolsky](https://github.com/Ndobrovolsky)
 -   [All Contributors](../../contributors)
 
 ## License
