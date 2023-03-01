@@ -1,15 +1,15 @@
 <?php
 
-namespace Ndobrovolsky\LaravelToYapValidator\Tests\Feature;
+namespace Ndobrovolsky\LaravelToYupValidator\Tests\Feature;
 
 use Illuminate\Support\Facades\Validator;
-use Ndobrovolsky\LaravelToYapValidator\Tests\TestCase;
+use Ndobrovolsky\LaravelToYupValidator\Tests\TestCase;
 use Illuminate\Validation\ValidationRuleParser;
-use Ndobrovolsky\LaravelToYapValidator\Generator\RulesGenerator;
+use Ndobrovolsky\LaravelToYupValidator\Generator\RulesGenerator;
 
-use Ndobrovolsky\LaravelToYapValidator\Output\Script;
+use Ndobrovolsky\LaravelToYupValidator\Output\Script;
 //FormResourceReader
-use Ndobrovolsky\LaravelToYapValidator\Input\FormResourceReader;
+use Ndobrovolsky\LaravelToYupValidator\Input\FormResourceReader;
 
 class RequestRulesTest extends TestCase
 {

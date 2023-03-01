@@ -1,9 +1,9 @@
 <?php
 
-namespace Ndobrovolsky\LaravelToYapValidator\Generator\Rules;
+namespace Ndobrovolsky\LaravelToYupValidator\Generator\Rules;
 
-use Ndobrovolsky\LaravelToYapValidator\Generator\BaseRuleInterface;
-use Ndobrovolsky\LaravelToYapValidator\Generator\BaseRule;
+use Ndobrovolsky\LaravelToYupValidator\Generator\BaseRuleInterface;
+use Ndobrovolsky\LaravelToYupValidator\Generator\BaseRule;
 
 class DefaultRule implements BaseRuleInterface
 {

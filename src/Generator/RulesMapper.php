@@ -1,15 +1,15 @@
 <?php
 
-namespace Ndobrovolsky\LaravelToYapValidator\Generator;
+namespace Ndobrovolsky\LaravelToYupValidator\Generator;
 
-use Ndobrovolsky\LaravelToYapValidator\Generator\BaseRuleInterface;
-use Ndobrovolsky\LaravelToYapValidator\Generator\Rules\DefaultRule;
+use Ndobrovolsky\LaravelToYupValidator\Generator\BaseRuleInterface;
+use Ndobrovolsky\LaravelToYupValidator\Generator\Rules\DefaultRule;
 
 class RulesMapper
 {
     public static function getRule($rule)
     {
-        $rulesMap = config('laravel-to-yap-validator.rules');
+        $rulesMap = config('laravel-to-yup-validator.rules');
 
         foreach(array_values($rule) as $value){
             if (

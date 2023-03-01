@@ -1,10 +1,10 @@
 <?php
 
-namespace Ndobrovolsky\LaravelToYapValidator\Tests;
+namespace Ndobrovolsky\LaravelToYupValidator\Tests;
 
 use \Orchestra\Testbench\TestCase as OrchestraTestCase;
 use Illuminate\Foundation\Testing\Concerns\InteractsWithViews;
-use Ndobrovolsky\LaravelToYapValidator\LaravelToYapValidatorServiceProvider;
+use Ndobrovolsky\LaravelToYupValidator\LaravelToYupValidatorServiceProvider;
 
 class TestCase extends OrchestraTestCase
 {
@@ -19,7 +19,7 @@ class TestCase extends OrchestraTestCase
     protected function getPackageProviders($app)
     {
         return [
-            LaravelToYapValidatorServiceProvider::class,
+            LaravelToYupValidatorServiceProvider::class,
         ];
     }
 

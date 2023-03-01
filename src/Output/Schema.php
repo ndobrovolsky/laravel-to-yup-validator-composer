@@ -1,6 +1,6 @@
 <?php
 
-namespace Ndobrovolsky\LaravelToYapValidator\Output;
+namespace Ndobrovolsky\LaravelToYupValidator\Output;
 
 use Stringable;
 

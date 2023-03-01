@@ -1,9 +1,9 @@
 <?php
 
-namespace Ndobrovolsky\LaravelToYapValidator\Output;
+namespace Ndobrovolsky\LaravelToYupValidator\Output;
 
 use Stringable;
-use Ndobrovolsky\LaravelToYapValidator\Output\Schema;
+use Ndobrovolsky\LaravelToYupValidator\Output\Schema;
 
 class Script implements Stringable
 {

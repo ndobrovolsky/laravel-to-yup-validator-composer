@@ -1,9 +1,9 @@
 <?php
 
-namespace Ndobrovolsky\LaravelToYapValidator\Generator;
+namespace Ndobrovolsky\LaravelToYupValidator\Generator;
 
 use Illuminate\Validation\ValidationRuleParser;
-use Ndobrovolsky\LaravelToYapValidator\Generator\RulesMapper;
+use Ndobrovolsky\LaravelToYupValidator\Generator\RulesMapper;
 
 class RulesGenerator
 {

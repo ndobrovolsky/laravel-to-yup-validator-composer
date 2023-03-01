@@ -1,13 +1,13 @@
 <?php
 
-namespace Ndobrovolsky\LaravelToYapValidator;
+namespace Ndobrovolsky\LaravelToYupValidator;
 
 use Illuminate\Support\Facades\Facade;
 
 /**
- * @see \Ndobrovolsky\LaravelToYapValidator\Skeleton\SkeletonClass
+ * @see \Ndobrovolsky\LaravelToYupValidator\Skeleton\SkeletonClass
  */
-class LaravelToYapValidatorFacade extends Facade
+class LaravelToYupValidatorFacade extends Facade
 {
     /**
      * Get the registered name of the component.
@@ -16,6 +16,6 @@ class LaravelToYapValidatorFacade extends Facade
      */
     protected static function getFacadeAccessor()
     {
-        return 'laravel-to-yap-validator';
+        return 'laravel-to-yup-validator';
     }
 }

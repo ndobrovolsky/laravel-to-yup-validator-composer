@@ -1,8 +1,8 @@
 # Very short description of the package
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/Ndobrovolsky/laravel-to-yap-validator.svg?style=flat-square)](https://packagist.org/packages/Ndobrovolsky/laravel-to-yap-validator)
-[![Total Downloads](https://img.shields.io/packagist/dt/Ndobrovolsky/laravel-to-yap-validator.svg?style=flat-square)](https://packagist.org/packages/Ndobrovolsky/laravel-to-yap-validator)
-![GitHub Actions](https://github.com/Ndobrovolsky/laravel-to-yap-validator/actions/workflows/main.yml/badge.svg)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/Ndobrovolsky/laravel-to-yup-validator.svg?style=flat-square)](https://packagist.org/packages/Ndobrovolsky/laravel-to-yup-validator)
+[![Total Downloads](https://img.shields.io/packagist/dt/Ndobrovolsky/laravel-to-yup-validator.svg?style=flat-square)](https://packagist.org/packages/Ndobrovolsky/laravel-to-yup-validator)
+![GitHub Actions](https://github.com/Ndobrovolsky/laravel-to-yup-validator/actions/workflows/main.yml/badge.svg)
 
 This is where your description should go. Try and limit it to a paragraph or two, and maybe throw in a mention of what PSRs you support to avoid any confusion with users and contributors.
 
@@ -11,7 +11,7 @@ This is where your description should go. Try and limit it to a paragraph or two
 You can install the package via composer:
 
 ```bash
-composer require Ndobrovolsky/laravel-to-yap-validator
+composer require Ndobrovolsky/laravel-to-yup-validator
 ```
 
 ## Usage

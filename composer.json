@@ -1,9 +1,9 @@
 {
-    "name": "ndobrovolsky/laravel-to-yap-validator",
+    "name": "ndobrovolsky/laravel-to-yup-validator",
     "description": "A package for converting Laravel validation rules to javascript validation rules, making it easy to reuse your existing validation rules and streamline your development process.",
     "keywords": [
         "Ndobrovolsky",
-        "laravel-to-yap-validator"
+        "laravel-to-yup-validator"
     ],
     "homepage": "https://github.com/ndobrovolsky/laravel-to-yup-validator",
     "license": "MIT",
@@ -25,12 +25,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Ndobrovolsky\\LaravelToYapValidator\\": "src"
+            "Ndobrovolsky\\LaravelToYupValidator\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Ndobrovolsky\\LaravelToYapValidator\\Tests\\": "tests"
+            "Ndobrovolsky\\LaravelToYupValidator\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -44,10 +44,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Ndobrovolsky\\LaravelToYapValidator\\LaravelToYapValidatorServiceProvider"
+                "Ndobrovolsky\\LaravelToYupValidator\\LaravelToYupValidatorServiceProvider"
             ],
             "aliases": {
-                "LaravelToYapValidator": "Ndobrovolsky\\LaravelToYapValidator\\LaravelToYapValidatorFacade"
+                "LaravelToYupValidator": "Ndobrovolsky\\LaravelToYupValidator\\LaravelToYupValidatorFacade"
             }
         }
     }

@@ -1,14 +1,14 @@
 <?php
 
-namespace Ndobrovolsky\LaravelToYapValidator;
+namespace Ndobrovolsky\LaravelToYupValidator;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\View\Compilers\BladeCompiler;
-use Ndobrovolsky\LaravelToYapValidator\Output\Script;
-use Ndobrovolsky\LaravelToYapValidator\Input\FormResourceReader;
-use Ndobrovolsky\LaravelToYapValidator\Generator\RulesGenerator;
+use Ndobrovolsky\LaravelToYupValidator\Output\Script;
+use Ndobrovolsky\LaravelToYupValidator\Input\FormResourceReader;
+use Ndobrovolsky\LaravelToYupValidator\Generator\RulesGenerator;
 
-class LaravelToYapValidatorServiceProvider extends ServiceProvider
+class LaravelToYupValidatorServiceProvider extends ServiceProvider
 {
     /**
      * Bootstrap the application services.
@@ -25,29 +25,29 @@ class LaravelToYapValidatorServiceProvider extends ServiceProvider
         /*
          * Optional methods to load your package assets
          */
-        // $this->loadTranslationsFrom(__DIR__.'/../resources/lang', 'laravel-to-yap-validator');
-        // $this->loadViewsFrom(__DIR__.'/../resources/views', 'laravel-to-yap-validator');
+        // $this->loadTranslationsFrom(__DIR__.'/../resources/lang', 'laravel-to-yup-validator');
+        // $this->loadViewsFrom(__DIR__.'/../resources/views', 'laravel-to-yup-validator');
         // $this->loadMigrationsFrom(__DIR__.'/../database/migrations');
         // $this->loadRoutesFrom(__DIR__.'/routes.php');
 
         if ($this->app->runningInConsole()) {
             $this->publishes([
-                __DIR__.'/../config/config.php' => config_path('laravel-to-yap-validator.php'),
+                __DIR__.'/../config/config.php' => config_path('laravel-to-yup-validator.php'),
             ], 'config');
 
             // Publishing the views.
             /*$this->publishes([
-                __DIR__.'/../resources/views' => resource_path('views/vendor/laravel-to-yap-validator'),
+                __DIR__.'/../resources/views' => resource_path('views/vendor/laravel-to-yup-validator'),
             ], 'views');*/
 
             // Publishing assets.
             /*$this->publishes([
-                __DIR__.'/../resources/assets' => public_path('vendor/laravel-to-yap-validator'),
+                __DIR__.'/../resources/assets' => public_path('vendor/laravel-to-yup-validator'),
             ], 'assets');*/
 
             // Publishing the translation files.
             /*$this->publishes([
-                __DIR__.'/../resources/lang' => resource_path('lang/vendor/laravel-to-yap-validator'),
+                __DIR__.'/../resources/lang' => resource_path('lang/vendor/laravel-to-yup-validator'),
             ], 'lang');*/
 
             // Registering package commands.
@@ -61,17 +61,17 @@ class LaravelToYapValidatorServiceProvider extends ServiceProvider
     public function register()
     {
         // Automatically apply the package configuration
-        $this->mergeConfigFrom(__DIR__.'/../config/config.php', 'laravel-to-yap-validator');
+        $this->mergeConfigFrom(__DIR__.'/../config/config.php', 'laravel-to-yup-validator');
 
         // Register the main class to use with the facade
-        /* $this->app->singleton('laravel-to-yap-validator', function () {
-            return new LaravelToYapValidator;
+        /* $this->app->singleton('laravel-to-yup-validator', function () {
+            return new LaravelToYupValidator;
         }); */
     }
 
     protected function registerDirective(BladeCompiler $bladeCompiler)
     {
-        $bladeCompiler->directive('validationToYap', function () {
+        $bladeCompiler->directive('validationToYup', function () {
             $reader = new FormResourceReader();
             $resources = $reader->getInstances();
             $schemas = [];

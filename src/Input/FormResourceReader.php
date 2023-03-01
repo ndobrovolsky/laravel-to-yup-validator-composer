@@ -1,6 +1,6 @@
 <?php
 
-namespace Ndobrovolsky\LaravelToYapValidator\Input;
+namespace Ndobrovolsky\LaravelToYupValidator\Input;
 
 use RecursiveDirectoryIterator;
 use RecursiveIteratorIterator;

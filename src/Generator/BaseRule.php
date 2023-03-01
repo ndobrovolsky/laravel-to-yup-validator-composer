@@ -1,6 +1,6 @@
 <?php
 
-namespace Ndobrovolsky\LaravelToYapValidator\Generator;
+namespace Ndobrovolsky\LaravelToYupValidator\Generator;
 
 trait BaseRule
 {
