@@ -51,7 +51,7 @@ class GenerateValidationScript extends Command
 
         foreach ($resources as $name => $instance) {
             $rules = $instance->rules();
-            $data = RulesGenerator::generate($rules);
+            $data = (new RulesGenerator($rules))->generate();
             $schemas[$name] = $data;
         }
 

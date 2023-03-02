@@ -2,28 +2,31 @@
 
 namespace Ndobrovolsky\LaravelToYupValidator\Generator;
 
-use Illuminate\Validation\ValidationRuleParser;
+use Illuminate\Validation\Validator;
 use Ndobrovolsky\LaravelToYupValidator\Generator\RulesMapper;
 
-class RulesGenerator
+class RulesGenerator extends Validator
 {
-    public static function generate($rules)
+    public function __construct(array $rules)
     {
-        $parser = new ValidationRuleParser([]);
-        $parsed = self::parseRules($rules, $parser);
+        parent::__construct(app('translator'), [], $rules);
+
+    }
+
+    public function generate()
+    {
+        $rules = $this->rules;
         $result = [];
-        foreach ($parsed as $name => $value) {
+        $messages = [];
+        foreach ($rules as $name => $value) {
             $rule = RulesMapper::getRule($value);
-            $converted = $rule::convert($value, $parser);
+            $converted = $rule::convert($value);
+            foreach ($value as $ruleAttr) {
+                $messages[] = $this->getMessage($name, $ruleAttr);
+            }
             
             $result[$name] = $converted;
         }
         return $result;
-    }
-
-    private static function parseRules($rules, $parser)
-    {
-        $response = $parser->explode(ValidationRuleParser::filterConditionalRules($rules));
-        return $response->rules;
     }
 }

@@ -9,8 +9,8 @@ class StringRule implements BaseRuleInterface
 {
     use BaseRule;
 
-    public static function convert($rule, $parser)
+    public static function convert($rule)
     {
-        return 'yup.string()' . self::getSubRules($rule, $parser);
+        return 'yup.string()' . self::getSubRules($rule);
     }
 }

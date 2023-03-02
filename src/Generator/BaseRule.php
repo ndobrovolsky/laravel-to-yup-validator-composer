@@ -2,11 +2,14 @@
 
 namespace Ndobrovolsky\LaravelToYupValidator\Generator;
 
+use Illuminate\Validation\ValidationRuleParser;
+
 trait BaseRule
 {
-    private static function getSubRules($rule, $parser)
+    private static function getSubRules($rule)
     {
         $subRules = '';
+        $parser = new ValidationRuleParser([]);
         foreach ($rule as $value) {
             $ruleAttr = $parser->parse($value);
             $ruleAttrName = $ruleAttr[0] ?? '';
