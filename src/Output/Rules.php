@@ -4,7 +4,7 @@ namespace Ndobrovolsky\LaravelToYapValidator\Output;
 
 use Stringable;
 
-class Schema implements Stringable
+class Rules implements Stringable
 {
     protected $name;
     protected $rules;

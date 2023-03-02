@@ -12,5 +12,6 @@ return [
         'image' => Ndobrovolsky\LaravelToYupValidator\Generator\Rules\ImageRule::class,
         'numeric' => Ndobrovolsky\LaravelToYupValidator\Generator\Rules\NumericRule::class,
     ],
-    'resources_path' => 'Http/Requests'
+    'resources_path' => 'Http/Requests',
+    'script_path' => 'resources/js/vendor/laravel-to-yup/index.js',
 ];

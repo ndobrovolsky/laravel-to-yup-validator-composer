@@ -51,7 +51,9 @@ class LaravelToYupValidatorServiceProvider extends ServiceProvider
             ], 'lang');*/
 
             // Registering package commands.
-            // $this->commands([]);
+            $this->commands([
+                Console\GenerateValidationScript::class,
+            ]);
         }
     }
 
