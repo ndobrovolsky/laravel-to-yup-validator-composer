@@ -16,16 +16,16 @@ class Script implements Stringable
     public function __toString(): string
     {
         return <<<JAVASCRIPT
-            import yup from 'yup';
-            
-            var ltyValidation = {}
+        import yup from 'yup';
+        
+        var validation = {}
 
-            if(yup){
-                ltyValidation = {
-                    {$this->getSchemaLayout()}
-                }
+        if(yup){
+            validation = {
+                {$this->getSchemaLayout()}
             }
-            export default ltyValidation;
+        }
+        export default validation;
         JAVASCRIPT;
     }
 
@@ -43,7 +43,7 @@ class Script implements Stringable
     {
         $layout = '';
         foreach ($rules as $name => $rule) {
-            $layout .= "{$name}: {$rule},\n\t\t";
+            $layout .= "{$name}: {$rule},\n\t\t\t";
         }
 
         return trim($layout);

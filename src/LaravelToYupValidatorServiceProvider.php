@@ -15,13 +15,6 @@ class LaravelToYupValidatorServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        if ($this->app->resolved('blade.compiler')) {
-            $this->registerDirective($this->app['blade.compiler']);
-        } else {
-            $this->app->afterResolving('blade.compiler', function (BladeCompiler $bladeCompiler) {
-                $this->registerDirective($bladeCompiler);
-            });
-        }
         /*
          * Optional methods to load your package assets
          */
@@ -69,22 +62,5 @@ class LaravelToYupValidatorServiceProvider extends ServiceProvider
         /* $this->app->singleton('laravel-to-yup-validator', function () {
             return new LaravelToYupValidator;
         }); */
-    }
-
-    protected function registerDirective(BladeCompiler $bladeCompiler)
-    {
-        $bladeCompiler->directive('validationToYup', function () {
-            $reader = new FormResourceReader();
-            $resources = $reader->getInstances();
-            $schemas = [];
-
-            foreach ($resources as $name=> $instance ) {
-                $rules = $instance->rules();
-                $data = RulesGenerator::generate($rules);
-                $schemas[$name] = $data;
-            }
-
-            return count($schemas) > 0 ? new Script($schemas) : '';
-        });
     }
 }

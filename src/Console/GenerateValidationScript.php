@@ -25,14 +25,13 @@ class GenerateValidationScript extends Command
 
     public function handle()
     {
-        $path = config('laravel_to_yup_validator.script_path');
+        $path = config('laravel-to-yup-validator.script_path');
         $generated = $this->generate();
 
-        $this->info('Generating validation script...');
         $this->makeDirectory($path);
         $this->files->put(base_path($path), $generated);
 
-        $this->info('Validation script generated successfully!');
+        $this->info("Generated script located at: $path");
     }
 
     protected function makeDirectory($path)
