@@ -47,14 +47,13 @@ class GenerateValidationScript extends Command
     {
         $reader = new FormResourceReader();
         $resources = $reader->getInstances();
-        $schemas = [];
+        $data = [];
 
         foreach ($resources as $name => $instance) {
             $rules = $instance->rules();
-            $data = (new RulesGenerator($rules))->generate();
-            $schemas[$name] = $data;
+            $data[$name] = (new RulesGenerator($rules))->generate();
         }
 
-        return count($schemas) > 0 ? new Script($schemas) : '';
+        return count($data) > 0 ? new Script($data) : '';
     }
 }

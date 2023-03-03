@@ -7,17 +7,18 @@ use Ndobrovolsky\LaravelToYupValidator\Generator\Rules\DefaultRule;
 
 class RulesMapper
 {
-    public static function getRule($rule)
+    public static function getRule($rules)
     {
         $rulesMap = config('laravel-to-yup-validator.rules');
 
-        foreach(array_values($rule) as $value){
+        foreach(array_values($rules) as $value){
+            $rule = $value['rule'];
             if (
-                isset($rulesMap[$value])
-                && class_exists($rulesMap[$value])
-                && is_subclass_of($rulesMap[$value], BaseRuleInterface::class)
+                isset($rulesMap[$rule])
+                && class_exists($rulesMap[$rule])
+                && is_subclass_of($rulesMap[$rule], BaseRuleInterface::class)
             ) {
-                return $rulesMap[$value];
+                return $rulesMap[$rule];
             }
         }
 

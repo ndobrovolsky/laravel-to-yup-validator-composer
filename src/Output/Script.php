@@ -6,11 +6,11 @@ use Stringable;
 
 class Script implements Stringable
 {
-    protected $schemas;
+    protected $data;
 
-    public function __construct(array $schemas)
+    public function __construct(array $data)
     {
-        $this->schemas = $schemas;
+        $this->data = $data;
     }
 
     public function __toString(): string
@@ -20,32 +20,61 @@ class Script implements Stringable
         
         var validation = {}
 
-        if(yup){
+        if (yup) {
             validation = {
-                {$this->getSchemaLayout()}
+                {$this->geValidationtLayout()}
             }
         }
+        
         export default validation;
         JAVASCRIPT;
     }
 
-    private function getSchemaLayout(): string
-    {
-        $schemaLayout = '';
-        foreach ($this->schemas as $name => $rules) {
-            $schemaLayout .= "{$name}: yup.object().shape({\n\t\t\t{$this->getRulesLayout($rules)}\n\t\t}),\n\t\t";
+    private function geValidationtLayout(): string{
+        $layout = '';
+        foreach($this->data as $name => $value){
+            $layout .= "{$name}: {
+            rules: yup.object().shape({
+                {$this->getRulesLayout($value['rules'])}
+            }),
+            messages: {
+                {$this->getMessagesLayout($value['messages'])}
+            },
+        },\n\t\t";
         }
-
-        return $schemaLayout;
+        return trim($layout);
     }
+
 
     private function getRulesLayout($rules): string
     {
         $layout = '';
         foreach ($rules as $name => $rule) {
-            $layout .= "{$name}: {$rule},\n\t\t\t";
+            $layout .= "{$name}: {$rule},\n\t\t\t\t";
         }
 
         return trim($layout);
+    }
+
+    private function getMessagesLayout($messages): string
+    {
+        $layout = '';
+        foreach ($messages as $name => $items) {
+            $layout .= "{$name}: {
+                    {$this->getMessageLayout($items)}\n\t\t\t\t
+                },\n\t\t\t\t";
+        }
+
+        return trim($layout);
+    }
+
+    private function getMessageLayout($items): string
+    {
+        $messages = '';
+        foreach ($items as $name => $message) {
+            $messages .= "{$name}: '{$message}',\n\t\t\t\t\t";
+        }
+
+        return trim($messages);
     }
 }
